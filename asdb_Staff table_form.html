@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <title>Staff Data Entry Form</title>
+    <style>
+          body {
+            justify-content: center;
+            align-items: center;
+            /* margin: 0; */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+        .submitBtn{
+           background-color: rgb(102, 193, 223);
+           font-size: 14px;
+           font-weight: bold;
+           border: none;
+           color: black;
+           padding-left: 60px;
+           padding-right: 60px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           border-width: 1px;
+           cursor: pointer;
+           margin-top: 30px;
+           border-radius: 10px;
+        }
+        /* .submitBtn:hover{
+            transition-delay: 2s;
+            transition-duration: 1s;
+            color: white;
+        } */
+
+    </style>
+</head>
+<body>
+    <h1>Staff Data Entry Form</h1>
+    <form id="insertForm"  action="insert_staff_form.php" method="post">
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName"name="FirstName" required><br>
+
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName"name="LastName" required><br>
+
+        <label for="Academic_Qualification">Academic Qualification:</label>
+        <input type="text" id="Academic_Qualification"name="Academic_Qualification"><br>
+
+        <label for="DeptID">Department ID:</label>
+        <input type="number"id="DeptID" name="DeptID"><br>
+
+        <label for="Date_of_birth">Date of Birth:</label>
+        <input type="date"id="Date_of_birth" name="Date_of_birth" required><br>
+
+        <label for="HireDate">Hire Date:</label>
+        <input type="date" id="HireDate"name="HireDate" required><br>
+
+        <label for="Email">Email:</label>
+        <input type="email"id="Email" name="Email"><br>
+
+        <label for="Phone_number">Phone Number:</label>
+        <input type="tel" id="Phone_number"name="Phone_number" pattern="[0-9]{11}" placeholder="e.g., 01234567890"><br>
+
+        <label for="Gender">Gender:</label>
+        <select name="Gender"id="Gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+
+        <button class="submitBtn" type="submit">Submit</button>
+    </form>
+    <!-- ... (Your existing HTML code) ... -->
+
+<!-- Add a placeholder for displaying the connection status message -->
+<!-- <div id="connectionStatus"></div>
+
+<script>
+    // Function to check the database connection status when the page loads
+    function checkConnectionStatus() {
+        fetch("/check_connection")
+        .then(response => response.json())
+        .then(data => {
+            const connectionStatusDiv = document.getElementById("connectionStatus");
+            if (data.success) {
+                connectionStatusDiv.innerHTML = '<div style="background-color: lightgreen; padding: 10px;">Database connection successful!</div>';
+            } else {
+                connectionStatusDiv.innerHTML = '<div style="background-color: lightcoral; padding: 10px;">Database connection failed!</div>';
+            }
+        })
+        .catch(error => {
+            console.error("Error checking database connection:", error);
+            const connectionStatusDiv = document.getElementById("connectionStatus");
+            connectionStatusDiv.innerHTML = '<div style="background-color: lightcoral; padding: 10px;">An error occurred while checking the database connection.</div>';
+        });
+    }
+
+    // Attach the checkConnectionStatus function to the window.onload event
+    window.onload = checkConnectionStatus;
+
+    // Add the event listener for the form submission as you did before
+    document.getElementById("insertForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        fetch("/insert", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            alert("Record inserted successfully!");
+        })
+        .catch(error => {
+            console.error("Error inserting record:", error);
+            alert("An error occurred while inserting the record.");
+        });
+    });
+</script>
+
+    <script>
+        document.getElementById("insertForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          const formData = new FormData(this);
+          fetch("/insert", {
+            method: "POST",
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            alert("Record inserted successfully!");
+          })
+          .catch(error => {
+            console.error("Error inserting record:", error);
+            alert("An error occurred while inserting the record.");
+          });
+        });
+      </script> -->
+
+
+</body>
+</html>

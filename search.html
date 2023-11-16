@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            align-items: center;
+            background-color:white;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .form-links {
+            margin-top: 20px;
+        }
+
+        .form-link select {
+            padding: 5px;
+        }
+
+        .form-link button {
+            display: block;
+            margin: 5px auto;
+            padding: 8px 15px;
+        }
+        .bordered-table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+    .bordered-table th, .bordered-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .bordered-table th {
+        background-color: #f2f2f2;
+    }
+    #search{
+        margin-top: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            /* border-left: none;
+            border-right: none;
+            border-top: none; */
+            outline: none;
+            border: 1px solid grey;
+    }
+    .Submit{
+        background-color: rgb(102, 193, 223);
+           font-size: 14px;
+           /* font-weight: bold; */
+           border: none;
+           color: black;
+           padding-left: 60px;
+           padding-right: 60px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           border-width: 1px;
+           cursor: pointer;
+           margin-top: 30px;
+           border-radius: 10px;
+    }
+    /* .searchDiv{
+        background-color: rgb(204, 236, 247) ;
+    } */
+    </style>
+</head>
+<body>
+    <div class="searchDiv">
+    <h1>NewHopeASDB FreeText Search</h1>
+    <form action="search.php" method="POST">
+                <label for="search"> </label>
+                <input type="text" id="search" name="search" placeholder="Search:" required>
+                <span><button class="Submit" type="submit" title="click to search">Search</button></span>
+    </form>
+</div>
+</body>
+</html>

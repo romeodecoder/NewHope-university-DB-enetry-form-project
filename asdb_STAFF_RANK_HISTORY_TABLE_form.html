@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Rank History Data Entry Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="process_staff_rank_history_form.php" method="post">
+        <h1>Staff Rank History Data Entry Form</h1>
+        <label for="staffID">Staff ID:</label>
+        <input type="number" name="staffID" required>
+
+        <label for="RankID">Rank ID:</label>
+        <input type="number" name="RankID" required>
+
+        <label for="Salary">Salary:</label>
+        <input type="number" name="Salary" step="any" required>
+
+        <label for="StartDate">Start Date:</label>
+        <input type="date" name="StartDate" required>
+
+        <label for="EndDate">End Date:</label>
+        <input type="date" name="EndDate">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

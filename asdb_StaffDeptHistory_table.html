@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Department History Data Entry Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_staff_dept_history_form.php" method="post">
+        <h1>Staff Department History Data Entry Form</h1>
+        <label for="StaffID">Staff ID:</label>
+        <input type="number" name="StaffID" required>
+
+        <label for="DeptID">Department ID:</label>
+        <input type="number" name="DeptID" required>
+
+        <label for="StartDate">Start Date:</label>
+        <input type="date" name="StartDate" required>
+
+        <label for="EndDate">End Date:</label>
+        <input type="date" name="EndDate">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

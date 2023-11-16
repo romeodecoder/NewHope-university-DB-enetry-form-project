@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            align-items: center;
+            /* background-color: rgb(204, 236, 247); */
+        }
+
+        .uniName{
+            padding-top: 25px;
+            margin-bottom: 0px;
+            /* margin-top: 20px; */
+            /* text-align: center; */
+        }
+        h2{
+            padding-top: 30px;
+            margin-bottom: 0px;
+            /* text-align: center; */
+            /* margin: 50px; */
+            /* align-items: center;  */
+        }
+
+        .form-links {
+            margin-top: 20px;
+        }
+
+        .form-link select {
+            padding: 5px;
+            
+            
+        }
+        #formSelect{
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            outline: none;
+        }
+
+        .form-link button {
+            display: block;
+            margin: 5px auto;
+            padding: 8px 15px;
+        }
+        .lorem{
+            width: 600px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+        }
+        .mainDiv{
+            background-color:white;
+           box-shadow: 0 4px 8px 0 rgba(0,0,0,0),0 6px 20px 0 rgba(0,0,0,0.15);
+           margin-top: 50px;
+           height: 700px;
+           /* width: 600px; */
+           margin-left: auto;
+           margin-right: auto;
+           border-radius: 15px;
+        }
+        span{
+            color: rgb(102, 193, 223);
+            font-style: italic;
+            font-size: 20px;
+        }
+        .serachBtn{
+           background-color: rgb(102, 193, 223);
+           color: black;
+           padding-left: 100px;
+           padding-right: 100px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           /* border-color: gray; */
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           margin-top: 50px;
+           margin-left: 75px;
+           font-weight: bold;
+        }
+        .serachBtn:hover{
+           opacity: 0.9;
+           transition-duration: 0.5s;
+            color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+
+    <h1 class="uniName">New Hope University</h1>
+    <p class="lorem">
+        <span>NewHope University</span> is a beacon of academic excellence and innovation,
+         molding future leaders through its dedication to quality education and research. 
+         <!-- NewHope University's academic database houses comprehensive info about esteemed staff. This includes personal profiles, achievements, history, research, and taught courses -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Reiciendis eveniet temporibus iure animi. Consectetur, 
+         vitae voluptates iste accusamus quo fugiat cumque ipsam,
+          corporis iure rem voluptatem laboriosam nulla laborum recusandae.
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit,
+         aspernatur rem, quo aperiam debitis rerum sit eligendi voluptas quam officia sunt 
+         nam voluptatibus possimus a!
+        Maxime quae totam laudantium?</p>
+    <h2>Welcome to the Forms Page</h2>
+    <div class="form-links">
+        <form action="" method="get">
+            <label for="formSelect">Select a Form:</label>
+            <select title="Select a form to insert data into" id="formSelect" onchange="location = this.value;">
+                <option value="ASDB_COLLEGE_WELCOME_PAGE.html">choose a form</option>
+                <option value="http://localhost:8080/web_project0/asdb_%20course_table_form.html">course form</option>
+                <option value="http://localhost:8080/web_project0/asdb_Faculty_table_form.html">Faculty form</option>
+                <option value="http://localhost:8080/web_project0/asdb_Publications_table_form.html">Publications form</option>
+                <option value="http://localhost:8080/web_project0/asdb_Department_table_form.html">Department form</option>
+                <option value="http://localhost:8080/web_project0/asdb_RANK_TABLE_form.html">Rank Form</option>
+                <option value="http://localhost:8080/web_project0/asdb_Staff%20table_form.html">Staff2  Form</option>
+                <option value="asdb_STAFF_RANK_HISTORY_TABLE_form.html">STAFF RANK_HISTORY form</option>
+                <option value="asdb_STAFFCOURSE_TABLE_form.html">Staff Course Form</option>
+                <option value="asdb_StaffDeptHistory_table.html">Staff Dept History form</option>
+            </select>
+            
+        </form>
+        <a href="Adminpassword.html">
+            <button class="serachBtn" title="Search Academic Staff DataBase">Search ASDB</button>
+        </a>
+       
+       <div> </div>
+    </div>
+</body>
+</html>
